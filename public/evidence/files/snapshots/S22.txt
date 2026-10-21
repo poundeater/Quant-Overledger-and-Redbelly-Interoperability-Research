@@ -1,0 +1,19 @@
+Register a new DLT node
+POST https://fusion-rollup.quant.dev/nodes
+URL must be from an approved provider domain (for a public node).
+Page last modified: 2026-06-15
+
+Body Params
+address (uri, required): Node RPC URL from an approved provider domain (alchemy.com, infura.io,
+quiknode.pro, chainstack.com, getblock.io, blockdaemon.com, ankr.com,
+drpc.live). Must include an API key in the path.
+network (string)
+name (string)
+dlt (string, enum, required): EVM, HEDERA, SOLANA, SUI, APTOS, COSMOS
+
+Responses
+201 Node registered
+400 Bad request
+401 Unauthorized, missing or invalid credentials
+
+Credentials: Bearer

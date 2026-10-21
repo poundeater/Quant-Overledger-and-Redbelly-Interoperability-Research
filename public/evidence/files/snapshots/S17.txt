@@ -1,0 +1,71 @@
+# Redbelly Bridge — Sepolia ↔ Redbelly Testnet
+
+A working cross-chain bridge between Ethereum Sepolia and Redbelly Testnet, built for Redbelly DAO Task TASK-08.
+
+**Why this exists:** as of this research (July 2026), no major bridge protocol — LayerZero, Axelar, Wormhole, or Connext — has a testnet deployment on Redbelly Testnet. LayerZero is live on Redbelly *Mainnet* only. Rather than write documentation for infrastructure that doesn't exist yet, this repo implements a minimal, understandable lock-and-mint bridge you can actually run and verify. See `TECHNICAL_GUIDE.md` for the full writeup and the research behind that conclusion.
+
+## What's in here
+
+- `contracts/` — 4 Solidity contracts: `TestToken`, `SourceBridge` (Sepolia), `WrappedToken`, `DestBridge` (Redbelly Testnet)
+- `scripts/` — deploy scripts + a script to actually bridge tokens
+- `relayer/` — the off-chain relayer that watches both chains and moves funds
+- `TECHNICAL_GUIDE.md` — the full tutorial (start here if you're learning, not just running)
+- `integration-test.js` — full round-trip test against a local EVM, no testnet needed
+
+## Quick start
+
+### 1. Install
+```bash
+npm install
+```
+
+### 2. Verify everything compiles (no network needed)
+```bash
+npm run compile
+```
+
+### 3. Run the full flow locally first (no testnet, no wallet funding needed)
+```bash
+npm run test:local
+```
+This deploys all 4 contracts to a local EVM and runs a full lock → mint → burn → unlock cycle, including a check that duplicate-processing is correctly rejected. If this passes, the logic is proven correct before you touch real testnets.
+
+### 4. Set up your wallet
+Copy `.env.example` to `.env` and fill in:
+- `PRIVATE_KEY` — export from MetaMask (Account details → Show private key). Use a **fresh burner wallet**, not one with real funds.
+- `RELAYER_ADDRESS` — the public address for that same wallet (for this demo, relayer = deployer = you)
+
+Fund it:
+- Sepolia ETH: any Sepolia faucet (e.g. `sepoliafaucet.com`, or Alchemy's/Google's faucet)
+- Redbelly Testnet RBNT: Redbelly's testnet faucet (0.01 RBNT/day)
+
+### 5. Deploy to both testnets
+```bash
+npm run deploy:sepolia
+npm run deploy:redbelly
+```
+Each writes a `deployment-*.json` file with the addresses you'll need.
+
+### 6. Start the relayer (leave this running in its own terminal)
+```bash
+npm run relayer
+```
+
+### 7. Bridge tokens
+In a second terminal:
+```bash
+npm run bridge -- 10
+```
+This approves and locks 10 test tokens on Sepolia. Watch the relayer terminal — within ~10-20 seconds it should pick up the `Locked` event and mint the equivalent on Redbelly Testnet.
+
+### 8. Verify
+- Sepolia lock tx: `https://sepolia.etherscan.io/tx/<lock tx hash>`
+- Redbelly mint tx: `https://explorer.redbelly.network/tx/<mint tx hash>` (printed in the relayer's terminal output)
+
+## Architecture in one paragraph
+
+`SourceBridge` on Sepolia holds locked `TestToken` and emits a `Locked` event with a sequential nonce every time someone bridges. An off-chain relayer script polls for that event, then calls `mint()` on `DestBridge` (Redbelly Testnet), which mints `WrappedToken` 1:1. Each nonce can only be processed once, so the relayer (or anyone who compromises it) can't double-mint. The reverse path (burn on Redbelly → unlock on Sepolia) works the same way.
+
+## Trust model — read this before you assume it's production-ready
+
+This is a **trusted-relayer bridge**: whoever holds the relayer's private key can mint tokens on Redbelly Testnet by calling `mint()` with any recipient/amount, since there's no cryptographic proof tying a mint back to a real lock beyond the relayer's word. That's fine for testnet and for teaching bridge architecture — it is *not* how you'd run this with real value on mainnet without adding a verification layer (light client, multisig, optimistic fraud proofs, or a decentralized network like the DVNs LayerZero uses). The `TECHNICAL_GUIDE.md` covers this tradeoff in more depth.

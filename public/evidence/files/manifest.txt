@@ -1,0 +1,90 @@
+S1 2026-10-19T10:32:36Z https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative
+S6 2026-10-19T10:32:37Z https://docs.redbelly.network/pages/receptor/
+S7 2026-10-19T10:32:38Z https://docs.redbelly.network/pages/methods/proof-by-query/
+S8 2026-10-19T10:32:38Z https://docs.redbelly.network/pages/eligibility-sdk/overview/
+S9 2026-10-19T10:32:39Z https://docs.redbelly.network/pages/eligibility-sdk/client/hooks/useHasChainPermission/
+S10 2026-10-19T10:32:39Z https://tokeniser.com
+S11 2026-10-19T10:32:41Z https://blog.celer.network/2025/08/01/celer-announces-cbridge-support-for-redbelly/
+3b9f652d292ad5d0d5f1d830811580289b3cf37cc407a2e10accdc2f3678341a  S1.html
+4fbbae3af9e3990d899efa4370d335a8fca3bbd9f30b7a0add65594f95a44285  S9.html
+77cc12d24efcfd79a496b8c0012aa0c38c51938582f71bcd119f770b8e422ed6  S10.html
+5bb4722bf0b5bb8169ca9d56598ea296a2bbffab67b664f97ea997532e33dfe7  S11.html
+743b5cc97c1527d22546a4dff42e057fedc370b0dd8660bd7dd1ada6f67467b9  S6.html
+97c5327faf6890e980f686888672df0e80c21866b390200a4203390c66d6ea12  S7.html
+df4d4d3a6a12a6f4e9332a6c6048d4648f77ef1921a7e2e23e005ff4a55233c3  S8.html
+S12 2026-10-19T10:45:44Z https://vine.redbelly.network/environments/
+S13 2026-10-19T10:45:45Z https://vine.redbelly.network/consensus/evm-compatibility/
+S14 2026-10-19T10:45:45Z https://vine.redbelly.network/identity/user-access/
+33ddc48bf1dade41900dae8e49ed10f19c46871f243913f7f51444478282f370  S12.html
+7e378a473fca8134266efdea7cf004f9015b33840192ad7b1652ccd59bc16f0e  S13.html
+b1dc58d7d1b7d823267be85bdfb02ca525bbafc756e68d3b55ceb0bacdced0f2  S14.html
+S2 2026-10-20 text copied from a browser https://quant.network/press-releases/the-clearing-house-partners-with-quant-to-advance-the-on-chain-money-initiative/
+a9e6cd2d6bff225c7c142afa3e292d2740ecc71167e8fcd0fb84aba47a18fd92  S2.txt
+S3 2026-10-20 text copied from a browser https://docs.overledger.dev/docs/start-here
+2f6664cde7aa1b3e1bd1ff495c987152ab78f21eedc12d4788a8f0507fbf22fe  S3.txt
+S4 2026-10-20 text copied from a browser https://docs.overledger.dev/docs/connectors
+018fdb6612e56fab395ff63642991f867679232c6829bba6b051be478078741d  S4.txt
+S5 2026-10-20 text copied from a browser https://docs.overledger.dev/docs/fusion-rollup
+cacbe8e9dc9d57f903c26722db3eae6824c3cb142ab26d747d278c0649c8b0c6  S5.txt
+S15 2026-10-20 text copied from a browser https://docs.overledger.dev/reference/get_networks
+6410c15505dea35d4844dddb79f8d4fd8d4e25244b9b37ce890dd6a97264e63f  S15.txt
+S18 2026-10-20 browser screenshot or print of the source page
+ad7a0cc4a2e6d923ba8e5bb7ef598f742d9c46eea31575bfc3070f7b40ebad0d  S18.png
+S19 2026-10-20 browser screenshot or print of the source page
+439cb3a7679d82e2293727e3556a5100439f3c26e64cd0ffd32a762aebbc3a47  S19.txt
+# S19: scoped text copy of the page; price, holdings and advertising fields omitted; not a full capture
+S20 2026-10-20 PDF downloaded from the Task Board repository deliverable folder
+90ef10029d36826e497e1d61a57bcf345c0f92b6317c2cc1ed15ca2915fc700b  S20.pdf
+# S20: PDF document properties (author and creator fields) removed before saving. Page content is unchanged.
+S17 2026-10-20 https://github.com/tycayomide/redbelly-testnet-bridge
+1d97726e3552bf5f4f79c1351d37d235cf1335612abfc3d4b50387608645a84f  S17.txt
+S16 2026-10-20 https://redbridge.test-hub.xyz/
+be607dd53fabf1cf1847a39e6e87302b8222bbe26f424ee46e273ae1d2536708  S16.html
+# S16: author handle in links replaced with REDACTED; page text unchanged
+S21 2026-10-20 https://www.quant.network/perspectives/how-overledger-delivers-enterprise-grade-dlt-interoperability-for-financial-services
+c3f5408b40254ee3e21b5b3784e62b088315543aa8c250a280dbabbbde103bf6  S21.txt
+S22 2026-10-20 https://docs.overledger.dev/reference/post_nodes
+4eba98efe665d72de35f559e50273614468d159f5fd9be635cfa7229e287f425  S22.txt
+# S22: text of the reference page body, copied from a page fetch, not a browser print.
+S23 2026-10-20 text copied from a browser https://docs.overledger.dev/docs/overview
+698886054bfab852abec4d3f42edd97ed1f3c16bfd44022b4801074adb53c841  S23.txt
+S24 2026-10-20 text copied from a browser https://docs.overledger.dev/docs/overledger-firewall
+928f9529cf19a12726097b5bab553253ffd42f790e39bea78f16e30cbf63ec5d  S24.txt
+S25 2026-10-20T20:12:41Z https://tokeniser.com/product/superpowers/automated-compliance
+c01c242ba08c48fcf0ce7e03f2fc65cd5705fe72e78453c3964fb6c4ad6d5b5f  S25.html
+S26 2026-10-20T20:12:41Z https://tokeniser.com/technology
+c3c804810c8ff7ca5775f713ed0d002eb0bef8303f92d4a4d168ade0f6af1bf1  S26.html
+S27 2026-10-20T20:12:42Z https://vine.redbelly.network/smart-contracts/eligibility-checks/
+3a52dba4ddc79506faccbf95bac84065a9a5ad49d4765034728dd3d509a70d8a  S27.html
+S28 2026-10-20T20:12:42Z https://vine.redbelly.network/identity/eligibility/
+70063fe60e8f1d6f45e4b1b9161d41294f9cdef6526a10835b3f94951d91f940  S28.html
+S29 2026-10-20T20:12:42Z https://vine.redbelly.network/bridged-tokens/layerzero/
+fe226ffc6f400352957a07b5338df84d4625b8ba0ca07b7579a1605de5471e53  S29.html
+S30 2026-10-20T20:12:42Z https://vine.redbelly.network/bridged-tokens/celer/
+cf4bb887856b5078290487b388ffabbe3113cce6b7b54dfeb0ba58cf7b367b32  S30.html
+S31 2026-10-20T20:12:43Z https://docs.redbelly.network/pages/methods/selective-disclosure/
+d9d1b36ba688e5873a89c204593b6d5570e9dae3aab6f6f0fa8b00ae183175cd  S31.html
+S32 2026-10-20 page printed to PDF in a browser, text re-typed in reading order without layout or buttons https://docs.overledger.dev/reference/get_health
+002ebc43363345407b9de065c7fdaed1a020367ec285b5d4912edf093438edbe  S32.txt
+# S32: header lines at the top of the file say where and when it was saved; page text is unchanged
+# tests/: SHA-256 of each own-test log as committed on 2026-10-21; fusion-health-check.txt also matches the hash printed when it was captured
+b45afe0e2c6ec6385ffd8bc371437419ec07492c853940f1d73d9a2de299339b  tests/ankr-rpc.txt
+5bd0a63c2f95fa00e1e61c6e6f8d21fcb4d048e10167ab6b1ae3dae529072fe2  tests/fusion-health-check.txt
+f584ed0df3c2652e578a563a67ddff36cbd152aa998861b7884d5edb02435e2b  tests/overledger-networks-fusion.json
+fce7909219bc0a1e5dc96a5a12cd6b25a09aa86fa7a307f557fa2d2441760d64  tests/overledger-networks.json
+078b594927727ac6fbc02c4d81d1d17286ec621fcbd0df3dbb18bf0cf8001d9d  tests/overledger-node-names.txt
+dc62c8162a49e67d8b7fa0b43b344e091bfa9ed321bc795e8388eefdc217b213  tests/overledger-node-register.txt
+330169a04171e0ef8dc5b7fcdf8559c26a4981a5b0cfb749eb925b3acd6e7d56  tests/overledger-run-time.txt
+885c4a6539d037dbb285006485e8ff361271479cd25106a6aa762717480b117e  tests/redbelly-rpc.txt
+60c3208ca038c9b4f57f8de917dadf3d9d393297ff194ae19b508378f98d9abe  tests/rpc-direct-check.txt
+b2254a8879a639e97cd9cfe49da25e19887675ea738a8e8b592f5403d2c3ee54  tests/rpc-testnet-check.txt
+S33 2026-10-21T05:48Z (time of the saved file) https://vine.redbelly.network/identity/accredited-issuers/
+3980b3c154e7323edf440a2b56687a7f65fcd041d8b6133571aa815006f34b80  S33.html
+S34 2026-10-21T05:48Z (time of the saved file) https://vine.redbelly.network/bridged-tokens/lucidlabs/
+5468fca66e09bac1f29a530c69543311a585a9ef7740c5b6ca7a7ea38a93ba77  S34.html
+S35 2026-10-21T05:48Z (time of the saved file) https://vine.redbelly.network/identity/
+c09a710cb671b064ad01c1bedfd196f449537ef7b0a78c702462c82efde00561  S35.html
+S36 2026-10-21T05:48Z (time of the saved file) https://docs.redbelly.network/pages/eligibility-sdk/eligibility-sdk/
+73c33f1f4532e18f64eb4fe5d521c77ff6caae61854391e13afa8c195b0b257f  S36.html
+S37 2026-10-20T20:12:41Z (first saved; same file kept) https://tokeniser.com/product/superpowers/secondary-transfer
+7da59a9d5d8dfb9738f63acbe50bdae93cdbe12000a350e79bd3b4a85c5f1125  S37.html

@@ -1,0 +1,11 @@
+Captured (UTC): 2026-10-20T20:01:05Z
+Endpoint: https://governors.mainnet.redbelly.network
+Method: eth_chainId
+{"jsonrpc":"2.0","id":1,"result":"0x97"}
+
+Method: net_version
+{"jsonrpc":"2.0","id":1,"error":{"code":-32601,"message":"the method net_version does not exist/is not available"}}
+
+Method: eth_blockNumber
+{"jsonrpc":"2.0","id":1,"result":"0x314f1a"}
+

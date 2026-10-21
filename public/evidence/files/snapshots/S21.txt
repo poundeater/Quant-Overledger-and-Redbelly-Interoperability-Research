@@ -1,0 +1,142 @@
+
+Who we serve
+Who we serve
+We empower banks, financial institutions and capital markets to unlock new revenue streams, deploy new services and future-proof their infrastructure with programmable money. This is the money of the future.
+
+Banks
+Financial Institutions
+Capital Markets
+Solutions
+Solutions
+Global programmable money enables businesses to transform and modernise their existing bank accounts and treasury management systems with money that thinks, reacts and automates transactions.
+
+Overledger
+Quant Flow Platform
+QuantNet
+Quant Fusion
+Discover PayScript®
+Insights
+Insights
+Quant Flow leverages our patented technology, technical expertise and extensive experience to deliver the money of the future via a platform that can seamlessly connect, orchestrate and program money like never before.
+
+Use cases
+Blogs and articles
+Reports and Media
+Discover PayScript®
+Company
+Company
+As pioneers in programmability and champions of interoperability, we’re the world leader in next-generation payments. We make today’s money work in new ways. For banks, for corporates, for everyone – wherever they are and whenever they need it.
+
+About us
+Partners
+Associations
+Careers
+Get in touch
+Get in touch
+Contact
+Media and Press
+Book a meeting
+Perspectives
+12 February 2026
+How Overledger delivers enterprise-grade DLT interoperability for financial services
+By Quant Network
+DLT Financial institutions Interoperability
+Back to Perspectives
+Share:
+
+Financial institutions exploring distributed ledger technology face a fundamental challenge: how to connect disparate blockchain networks and legacy systems without creating new silos or compromising on enterprise requirements. As digital assets, tokenised securities, and programmable finance move from pilot to production, the need for robust interoperability infrastructure has become critical.
+
+Quant’s Overledger platform addresses this challenge by providing a comprehensive interoperability layer that connects any distributed ledger technology while maintaining the privacy, scalability, security, and operational resilience that financial services demand.
+
+The interoperability foundation
+At its core, Overledger provides standardised APIs that enable financial institutions to interact with any connected DLT through a unified interface. Rather than building and maintaining separate integrations for each blockchain network, a task that quickly becomes unmanageable as the number of networks proliferates, organisations work through a single gateway that abstracts the underlying complexity.
+
+The platform operates on a transaction preparation-signing-execution model that separates transaction construction from cryptographic signing and final execution. This architecture proves essential for financial services, where transaction signing must integrate with existing key management infrastructure and satisfy stringent approval workflows before execution.
+
+Overledger supports various types of interoperability that financial institutions require. These capabilities are implemented using standards from the Internet Engineering Task Force, including the Secure Asset Transfer Protocol, with Quant actively contributing to the development of an extension for asset exchange.
+
+Privacy without compromise
+Privacy requirements in financial services are non-negotiable, yet many blockchain networks lack native privacy features. Overledger addresses this through a sophisticated firewall architecture that controls access at multiple levels without requiring modifications to underlying smart contracts.
+
+The firewall filters requests based on user identity, specific smart contracts being accessed, individual smart contract functions, and even the parameters passed to those functions. This granular control enables financial institutions to implement privacy policies that reflect their business requirements and regulatory obligations while maintaining the transparency and auditability that regulators and operators need.
+
+Central banks and network operators can connect through or bypass the firewall as requirements dictate, ensuring that oversight capabilities remain intact even as transaction-level privacy is enforced. This approach can prove more secure and maintainable than attempting to implement privacy through smart contract modifications, but on-chain privacy can still be implemented via smart contracts.
+
+Enterprise key management and security
+Financial institutions require integration with existing hardware security modules, key management systems, and wallet infrastructure, not replacement of these systems. Overledger accommodates this reality through OverWallet, which provides a unified interface to different security infrastructures without requiring separate integrations for each.
+
+The Authorise layer adds enterprise controls on top of OverWallet, implementing identity and access management, policy enforcement, and comprehensive audit trails. For instance, organisations can configure policies where only specific employee groups can request blockchain transaction signatures, or where transactions exceeding defined thresholds automatically trigger approval workflows before signing occurs.
+
+Every signature request is logged with complete attribution – who requested it, who approved it, and which cryptographic key was used. This audit capability satisfies both internal compliance requirements and external regulatory expectations for financial institutions operating digital asset infrastructure.
+
+Scalability and operational resilience
+Overledger employs a microservice architecture with built-in scaling through Kubernetes, enabling financial institutions to scale their interoperability infrastructure as transaction volumes grow. The platform utilises load balancers when required and implements automatic transaction retry mechanisms, reducing operational overhead and improving resilience.
+
+The system recommends appropriate transaction fees for networks where fees are applicable, monitors transaction status, and handles resubmission when needed, operational details that matter significantly when processing high volumes of financial transactions across multiple networks.
+
+Importantly, Overledger maintains an immutable audit trail of all transactions and API interactions. Requests and responses are logged for audit purposes, and optional verification services can operate independently to validate transaction integrity, providing an additional layer of assurance for regulated financial institutions.
+
+Functional capabilities for real-world operations
+Beyond basic connectivity, Overledger provides subscription-based webhooks that enable event-driven architectures. Financial institutions can register for specific transaction types, smart contract events, or block events, and Overledger automatically calls designated endpoints whenever these events occur. The platform ensures that every transaction in every block is evaluated against all registered subscriptions and implements retry logic if callbacks aren’t received.
+
+This capability enables financial institutions to build external indexing services that maintain their own data structures optimised for specific business requirements, whether that’s regulatory reporting, customer interfaces, or internal analytics, without being constrained by the data models of underlying blockchains.
+
+For organisations requiring advanced interoperability, Overledger supports building DLT oracles and bridges using both push and pull models.
+
+Production-ready architecture
+
+Financial institutions adopting DLT interoperability need infrastructure that integrates with existing systems rather than replacing them. Overledger’s connector architecture accommodates this requirement, enabling integration with enterprise ledger platforms like Corda and connection to legacy financial infrastructure.
+
+The platform supports the ability to add a request to “bring your own network”, allowing financial institutions to connect private blockchain networks, participate in consortia-based ledgers, and interact with public networks through the same interoperability layer. This flexibility proves essential as financial institutions navigate diverse use cases requiring different deployment models.
+
+Moving forward
+As financial services organisations move from DLT experimentation to production deployment, the infrastructure connecting these systems becomes mission-critical. Overledger provides the enterprise-grade interoperability platform that financial institutions require, delivering privacy, security, scalability, and operational resilience while maintaining the flexibility to accommodate evolving business requirements and emerging blockchain technologies.
+
+DLT Financial institutions Interoperability Overledger
+Back to Perspectives
+Share:
+“Financial institutions adopting DLT interoperability need infrastructure that integrates with existing systems rather than replacing them.”
+
+Quant Network
+Subscribe and be the first to know
+Enter your email
+
+By submitting your email address, you agree to receive occasional marketing messages from Quant, from which you can unsubscribe at any time. For more information please see our privacy policy.
+
+Related posts
+Perspectives
+15 October 2026
+Tokenised deposits are entering a network era
+Banks Digital money Stablecoins
+Tokenised deposits are entering a network era
+Events
+8 October 2026
+From pilots to production: Five takeaways from Sibos 2026
+Interoperability Programmability Programmable money
+From pilots to production: Five takeaways from Sibos 2026
+More
+Who we serve
+Banks
+Capital Markets
+Financial Institutions
+Solutions
+Quant Flow Platform
+QuantNet
+Quant Fusion
+Discover PayScript®
+Insights
+Use cases
+Blogs and articles
+Reports and Media
+Company
+About Us
+Partners
+Associations
+Careers
+Get in touch
+Contact
+Media and Press
+© 2026 Quant Network Limited. All rights reserved.
+Privacy policy
+Legal
+Making money work.

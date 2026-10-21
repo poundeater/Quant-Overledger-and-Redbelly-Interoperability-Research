@@ -1,0 +1,16 @@
+Test date: 2026-10-20 UTC; endpoint: https://rpc.ankr.com/redbelly_mainnet (public, no key)
+== eth_chainId
+{"id":1,"jsonrpc":"2.0","result":"0x97"}
+HTTP 200 in 0.157446s
+== net_version
+{"id":1,"jsonrpc":"2.0","error":{"code":-32601,"message":"the method net_version does not exist/is not available"}}
+HTTP 200 in 0.252680s
+== web3_clientVersion
+{"id":1,"jsonrpc":"2.0","result":"./linux-amd64/go1.25.12"}
+HTTP 200 in 0.200003s
+== eth_blockNumber
+{"id":1,"jsonrpc":"2.0","result":"0x314e21"}
+HTTP 200 in 0.182254s
+== eth_gasPrice
+{"id":1,"jsonrpc":"2.0","result":"0x13f17254ecfd4"}
+HTTP 200 in 0.176554s

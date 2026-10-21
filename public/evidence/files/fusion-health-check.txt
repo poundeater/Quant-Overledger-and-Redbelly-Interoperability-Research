@@ -1,0 +1,4 @@
+Captured (UTC): 2026-10-20T20:30:09Z
+GET https://fusion-rollup.quant.dev/health
+{"status":"degraded","runtimeVersion":"1.0.0","supportedSdkVersions":["^1.0.0"],"checks":{"webhookWorker":"ok","withdrawalIndexer":"ok","trackerPoller":"stalled","mongo":"connected","rpcProxy":"ok","rollupRpc":"ok"}}
+HTTP 200

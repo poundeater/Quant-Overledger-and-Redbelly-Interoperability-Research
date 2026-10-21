@@ -1,0 +1,35 @@
+Source: https://docs.overledger.dev/reference/get_health
+Captured (UTC): 2026-10-20T20:32:00Z
+Saved from the page as printed to PDF on 21/10/2026 02:02 (IST). Text reproduced as shown on the page.
+
+Liveness check
+GET https://fusion-rollup.quant.dev/health
+
+Response
+200
+Service is alive
+RESPONSE BODY
+object
+status string
+runtimeVersion string
+The Flow App runtime version that Overledger is running.
+supportedSdkVersions array of strings
+The Flow App SDK versions this runtime accepts.
+
+Updated 4 months ago
+Readiness check
+
+cURL Request
+curl --request GET \
+ --url https://fusion-rollup.quant.dev/health \
+ --header 'accept: application/json'
+
+200
+{
+ "status": "ok",
+ "runtimeVersion": "1.0.0",
+ "supportedSdkVersions": [
+ "1.0.0",
+ "1.1.0"
+ ]
+}

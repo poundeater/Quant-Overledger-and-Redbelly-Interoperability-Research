@@ -1,0 +1,30 @@
+# Plain words
+
+- **Overledger:** Quant's platform for building applications that span more than one blockchain, with one set of credentials and one API [S3].
+- **Gateway:** One authenticated entry point to many blockchain networks, so users do not run their own node connections [S3].
+- **Fusion Rollup:** A separate shared layer built on the OP Stack that anchors to several base chains at once [S3].
+- **Connector:** How Overledger links to a blockchain network. It comes in two forms, self-serve and managed engagement [S4].
+- **Self-serve:** The route for public permissionless chains. A user registers a node through an API call, with no account team involved [S4].
+- **Managed engagement:** A project with Quant's team, used for permissioned or gated networks and for public chains not yet self-serve [S4].
+- **Node:** A server that exposes a chain's RPC or REST address. In Overledger, the first node registration also registers the network [S4].
+- **RPC:** The interface an app uses to read a chain and send transactions to it. Redbelly lists public RPC addresses for mainnet and testnet [S12].
+- **Chain ID:** A number that identifies a network. Redbelly's portal lists 151 for mainnet and 153 for testnet [S12], and our test saw 151 on mainnet [T1].
+- **EVM:** The Ethereum Virtual Machine. Redbelly says it is compatible, with EVM version Prague [S13].
+- **Receptor:** Redbelly's native identity and verifiable credential protocol, built on the W3C verifiable credential model [S6].
+- **Access credential:** What a Redbelly user claims from an accredited issuer before the account can write to the network [S14].
+- **Proof by Query:** A way to prove a fact, such as being over 18, to a verifier contract without putting the data on chain [S7].
+- **Tokeniser:** A Redbelly Network project where eligibility rules are built into the asset and checked on every transfer [S10].
+- **Allowlist:** A list of addresses that may take part. Fusion keeps a per-asset token list and a sender list [S5].
+- **Dispute window:** The wait before a rollup withdrawal becomes final [S5].
+- **Pegged copy:** A version of an asset minted on another chain that stands for the original. Celer's bridge to Redbelly started as a pegged bridge [S11].
+- **Relayer:** A service that watches one chain and acts on another. In the community testnet bridges, whoever controls the relayers decides what is minted on the far side [S16][S17].
+- **Issuer:** Someone who issues credentials. Anyone can issue them with Receptor's issuer module [S28].
+- **Accredited issuer:** An issuer approved by Redbelly governance to give network access credentials. All of them are listed in an on chain registry [S28][S33].
+- **Verifier contract:** A smart contract that checks a proof. In Redbelly's published proof flow it is deployed on Redbelly [S7].
+- **Revocation:** Withdrawing a credential so it no longer counts. Redbelly's proof flow checks a credential's revocation status [S7].
+- **Selective disclosure:** A Receptor credential type that works off chain only [S28][S31].
+- **Eligibility SDK:** Redbelly's toolkit for checking investor eligibility with Privado ID and Iden3 zero-knowledge proofs, with a backend verifier service [S36].
+- **Firewall:** Overledger's rules layer. One layer runs in the Gateway and one runs on chain on the rollup and each connected chain [S24].
+- **Governance signers:** The Quant signers who control Fusion's token list [S24].
+- **Public permissioned:** Overledger's name for a network where anyone can read but only allowlisted parties can write [S23].
+- **Health check:** The test Overledger runs when a node is registered [S4].

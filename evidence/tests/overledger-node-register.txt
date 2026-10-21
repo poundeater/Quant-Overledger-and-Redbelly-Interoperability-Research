@@ -1,0 +1,34 @@
+Test T3: Overledger node registration, 20 Oct 2026 (UTC), base https://fusion-rollup.quant.dev
+Keys and provider key values are removed. Runs 1 to 3 were scripted, runs 4 to 7 were typed by hand in the same shell; output is copied from the terminal.
+Account id and internal ids are left out. Ankr endpoint in the requests: public-network URL with the key in the path.
+
+== Run 1, 13:13 UTC: Authorization: Bearer <key>
+GET /users/me/nodes  -> HTTP 401 {"status":401,"error":"Invalid or expired token."}
+POST /nodes          -> HTTP 401 {"status":401,"error":"Invalid or expired token."}
+GET /users/me/nodes  -> HTTP 401 {"status":401,"error":"Invalid or expired token."}
+No node id found, nothing to delete.
+
+== Run 2, 13:14 UTC: same key sent as header X-API-Key
+GET /users/me/nodes (before) -> HTTP 200 {"data":[],"total":0,"page":1,"pageSize":10,"totalPages":0}
+
+== Run 3, 13:14 UTC: POST /nodes with address=<Ankr redbelly_mainnet URL>, dlt=EVM, network="redbelly-mainnet" (our guess), name=redbelly-test
+POST /nodes -> HTTP 400 {"status":400,"error":"Bad Request","message":"Unsupported network - check the RPC URL matches the selected network.","path":"/nodes"}
+GET /users/me/nodes (after) -> HTTP 200 {"data":[],"total":0,...}
+
+== Run 4: Ankr endpoint called directly
+eth_chainId -> {"id":1,"jsonrpc":"2.0","result":"0x97"}
+
+== Run 5: live network list keys searched for "red" or "rbnt"
+GET /networks?pageSize=100, keys filtered -> no redbelly key in list
+(59 keys in total; none names a mainnet; see overledger-networks.json)
+
+== Run 6: POST /nodes with address=<Ankr redbelly_mainnet URL>, dlt=EVM, name=redbelly-test, no network field
+POST /nodes -> HTTP 400 {"status":400,"error":"Bad request","message":"network : Required","path":"/nodes"}
+
+== Run 7, about 13:19 UTC: control, valid network name from the live list
+POST /nodes with address=<Ankr eth_sepolia URL>, dlt=EVM, network="Ethereum Sepolia", name=control-test
+  -> HTTP 200, node object returned with "active":true, "network":"Ethereum Sepolia"
+GET /users/me/nodes -> total 1, address shown masked (last four characters only)
+DELETE /nodes/<_id>  -> HTTP 200
+GET /users/me/nodes -> "data":[],"total":0
+(An earlier DELETE using an empty id returned HTTP 404 "Cannot DELETE /nodes/"; the node id field is named _id, not id.)

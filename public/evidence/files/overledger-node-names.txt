@@ -1,0 +1,25 @@
+Test date: 2026-10-20 15:56:38 UTC; base: https://fusion-rollup.quant.dev; auth: X-API-Key; keys removed; names tried: 6
+== GET /users/me/nodes (before)
+{"data":[],"total":0,"page":1,"pageSize":10,"totalPages":0}
+HTTP 200
+== POST /nodes, network="Redbelly Mainnet"
+{"timestamp":1792511799584,"status":400,"error":"Bad Request","message":"Unsupported network - check the RPC URL matches the selected network.","path":"/nodes"}
+HTTP 400
+== POST /nodes, network="Redbelly Network"
+{"timestamp":1792511802000,"status":400,"error":"Bad Request","message":"Unsupported network - check the RPC URL matches the selected network.","path":"/nodes"}
+HTTP 400
+== POST /nodes, network="Redbelly Network Mainnet"
+{"timestamp":1792511804335,"status":400,"error":"Bad Request","message":"Unsupported network - check the RPC URL matches the selected network.","path":"/nodes"}
+HTTP 400
+== POST /nodes, network="Redbelly"
+{"timestamp":1792511806705,"status":400,"error":"Bad Request","message":"Unsupported network - check the RPC URL matches the selected network.","path":"/nodes"}
+HTTP 400
+== POST /nodes, network="Redbelly Testnet"
+{"timestamp":1792511809052,"status":400,"error":"Bad Request","message":"Unsupported network - check the RPC URL matches the selected network.","path":"/nodes"}
+HTTP 400
+== POST /nodes, network="Redbelly Network Testnet"
+{"timestamp":1792511811426,"status":400,"error":"Bad Request","message":"Unsupported network - check the RPC URL matches the selected network.","path":"/nodes"}
+HTTP 400
+== GET /users/me/nodes (after)
+{"data":[],"total":0,"page":1,"pageSize":10,"totalPages":0}
+HTTP 200

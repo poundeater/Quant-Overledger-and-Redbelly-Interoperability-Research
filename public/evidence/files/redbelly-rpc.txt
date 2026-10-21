@@ -1,0 +1,13 @@
+== eth_chainId
+{"jsonrpc":"2.0","id":1,"result":"0x97"}
+
+== net_version
+{"jsonrpc":"2.0","id":1,"error":{"code":-32601,"message":"the method net_version does not exist/is not available"}}
+
+== web3_clientVersion
+{"jsonrpc":"2.0","id":1,"result":"./linux-amd64/go1.25.14"}
+
+== eth_blockNumber
+{"jsonrpc":"2.0","id":1,"result":"0x31496f"}
+
+Mon Oct 19 10:32:58 UTC 2026

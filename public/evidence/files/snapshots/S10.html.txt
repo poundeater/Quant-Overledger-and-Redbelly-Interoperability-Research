@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google Consent Mode v2 — denied by default (must precede tags) -->
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied',
+        security_storage: 'granted',
+        wait_for_update: 500,
+      })
+    </script>
+    <link rel="stylesheet" href="/assets/cookie-consent.css?v=11" />
+    <script src="/assets/cookie-consent.js?v=15"></script>
+    <!-- gtag.js loader — analytics and/or marketing -->
+    <script
+      type="text/plain"
+      data-consent="gtag"
+      async
+      data-src="https://www.googletagmanager.com/gtag/js?id=G-TZK024ZGKH"
+    ></script>
+    <!-- GA4 — analytics only -->
+    <script type="text/plain" data-consent="analytics">
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-TZK024ZGKH', {
+        // Marketing/GTM owns page_view when granted; otherwise GA4 must send it.
+        send_page_view: !(
+          window.TokeniserConsent &&
+          typeof window.TokeniserConsent.allows === 'function' &&
+          window.TokeniserConsent.allows('marketing')
+        ),
+      })
+    </script>
+    <!-- Google Ads — marketing only -->
+    <script type="text/plain" data-consent="marketing">
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'AW-18204988710')
+    </script>
+    <!-- Google Tag Manager — marketing only -->
+    <script type="text/plain" data-consent="marketing">
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-PFV387NG')
+    </script>
+    <!-- Zoho PageSense — analytics only -->
+    <script
+      type="text/plain"
+      data-consent="analytics"
+      defer
+      data-src="https://cdn-au.pagesense.io/js/redbellynetwork/04a76adde5b94daea926129c8df5df69.js"
+    ></script>
+    <!-- Zoho SalesIQ — marketing (visitor tracking; launcher hidden) -->
+    <script type="text/plain" data-consent="marketing">
+      window.$zoho = window.$zoho || {}
+      $zoho.salesiq = $zoho.salesiq || {}
+      $zoho.salesiq.ready = function () {
+        $zoho.salesiq.floatbutton.visible('hide')
+      }
+    </script>
+    <script
+      type="text/plain"
+      data-consent="marketing"
+      id="zsiqscript"
+      defer
+      data-src="https://salesiq.zohopublic.com.au/widget?wc=271089e78a1c52368d25f1a05ac3a5e1dd42ae2f781abe0e43012631260836af"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- prettier-ignore -->
+    <title>Give your Australian fund a global edge | Tokeniser</title>
+    <meta
+      name="description"
+      content="Give your Australian fund a global edge with Tokeniser — 24/7 liquidity, instant settlement, and compliant tokenisation on Redbelly Network."
+    />
+    <meta
+      property="og:title"
+      content="Tokeniser - Secure & Simple Digital Asset Management"
+    />
+    <meta
+      property="og:description"
+      content="Give your Australian fund a global edge with Tokeniser — 24/7 liquidity, instant settlement, and compliant tokenisation on Redbelly Network."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tokeniser.com/" />
+    <meta
+      property="og:image"
+      content="https://tokeniser.com/assets/home-1b/hero.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://tokeniser.com/assets/home-1b/hero.webp"
+    />
+    <link rel="canonical" href="https://tokeniser.com/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Montserrat:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700;900&display=swap"
+    />
+    <link rel="icon" href="/assets/favicon.png?v=2" type="image/png" />
+    <link rel="shortcut icon" href="/assets/favicon.png?v=2" type="image/png" />
+    <link rel="apple-touch-icon" href="/assets/favicon.png?v=2" />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/home-1b/hero.webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/assets/home-1b/phosphor-thin.woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/assets/h1b-header.css?v=28" />
+    <link rel="stylesheet" href="/assets/knowledge-hub/proto-bar.css?v=6" />
+    <link rel="stylesheet" href="/assets/home-1b.css?v=71" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://tokeniser.com/#organization",
+            "name": "Tokeniser",
+            "url": "https://tokeniser.com/",
+            "logo": "https://tokeniser.com/assets/favicon.png",
+            "parentOrganization": {
+              "@type": "Organization",
+              "name": "Redbelly Network"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "email": "info@tokeniser.com",
+              "url": "https://tokeniser.com/contact"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://tokeniser.com/#website",
+            "url": "https://tokeniser.com/",
+            "name": "Tokeniser",
+            "publisher": { "@id": "https://tokeniser.com/#organization" }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://tokeniser.com/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is Tokenisation?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tokenisation records ownership of financial products and services as digital tokens, and lets you program the rules of the asset. Holders gain fractional ownership, direct custody, atomic settlement, and 24/7 secondary trading through protocol finance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why use Tokeniser?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tokeniser gives you the benefits of tokenisation without the technology project. Your team keeps familiar registry operations, one platform handles everything from issuance to settlement, and you gain a lower cost of capital, faster raises, and new distribution reach."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Tokeniser regulated?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tokeniser is built for Australia's digital asset laws as public digital token infrastructure: governed under local law, with eligibility and compliance programmed into the protocol. Products issued through Tokeniser operate under an Asset Issuer's existing licensing."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can we use our own systems?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Customer configuration is flexible. Our API and MCP let you integrate Tokeniser with your existing registry, or build a custom investor portal."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does onboarding take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You set the pace. Onboarding is staged, so you can start with a first raise or a registry migration and add capabilities as you're ready. Our practitioners guide each stage, and your timeline follows your business."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What about compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Designed to work within your existing licensing framework, Tokeniser programs eligibility into every asset at the protocol level: identity, KYC, AML, CTF, wholesale and sophisticated investor tests, and TMD. Every holder is verified and every transfer checked against the asset's rules."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) disabled — CMP gates tags; URL kept for CI:
+         https://www.googletagmanager.com/ns.html?id=GTM-PFV387NG -->
+
+    <!-- Home 1b header — Phase 1 nav from website sitemap -->
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="h1b-header">
+      <div class="h1b-header__inner">
+        <a class="h1b-header__logo" href="/" aria-label="Tokeniser home">
+          <img
+            src="/assets/2eec17b008d55b157b9dadc218a69c7f343c8f3b.svg"
+            alt="Tokeniser"
+          />
+        </a>
+
+        <nav class="h1b-nav" aria-label="Primary">
+          <div class="h1b-nav__item">
+            <button
+              type="button"
+              class="h1b-nav__btn"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              Product <i class="ph-thin ph-caret-down" aria-hidden="true"></i>
+            </button>
+            <div class="h1b-nav__menu">
+              <a href="/product">Overview</a>
+              <a href="/product/distribution">Distribution</a>
+              <a href="/product/liquidity">Liquidity</a>
+              <a href="/product/efficiency">Efficiency</a>
+              <a href="/product/getting-started">Getting Started</a>
+            </div>
+          </div>
+
+          <div class="h1b-nav__item">
+            <button
+              type="button"
+              class="h1b-nav__btn"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              Superpowers
+              <i class="ph-thin ph-caret-down" aria-hidden="true"></i>
+            </button>
+            <div class="h1b-nav__menu h1b-nav__menu--superpowers">
+              <div class="h1b-nav__group">
+                <a class="h1b-nav__group-label" href="/product/distribution"
+                  >Distribution</a
+                >
+                <a href="/product/superpowers/always-on">Always-On</a>
+                <a href="/product/superpowers/real-time-transparency"
+                  >Real-Time Transparency</a
+                >
+              </div>
+              <div class="h1b-nav__group">
+                <a class="h1b-nav__group-label" href="/product/liquidity"
+                  >Liquidity</a
+                >
+                <a href="/product/superpowers/secondary-transfer"
+                  >Secondary Transfer</a
+                >
+                <a href="/product/superpowers/collateral-mobility"
+                  >Collateral Mobility</a
+                >
+              </div>
+              <div class="h1b-nav__group">
+                <a class="h1b-nav__group-label" href="/product/efficiency"
+                  >Efficiency</a
+                >
+                <a href="/product/superpowers/instant-settlement"
+                  >Instant Settlement</a
+                >
+                <a href="/product/superpowers/automated-compliance"
+                  >Automated Compliance</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="h1b-nav__item">
+            <button
+              type="button"
+              class="h1b-nav__btn"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              Solutions <i class="ph-thin ph-caret-down" aria-hidden="true"></i>
+            </button>
+            <div class="h1b-nav__menu">
+              <a href="/solutions/funds">For Funds</a>
+              <a href="/solutions/companies">For Corporate Registry</a>
+              <a href="/solutions/asset-administrators"
+                >For Asset Administrators</a
+              >
+            </div>
+          </div>
+
+          <div class="h1b-nav__item">
+            <button
+              type="button"
+              class="h1b-nav__btn"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              Resources <i class="ph-thin ph-caret-down" aria-hidden="true"></i>
+            </button>
+            <div class="h1b-nav__menu">
+              <a href="/resources/knowledge-hub">Knowledge Hub</a>
+              <a href="/why-tokenise">Why Tokenise</a>
+              <a href="/protocol-finance">Protocol Finance</a>
+              <a href="/tokenisation-readiness-index">Readiness Index</a>
+              <a href="/tokenisation-calculator">Impact Calculator</a>
+            </div>
+          </div>
+
+          <div class="h1b-nav__item">
+            <a class="h1b-nav__link" href="/pricing">Pricing</a>
+          </div>
+
+          <div class="h1b-nav__item">
+            <button
+              type="button"
+              class="h1b-nav__btn"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              About Us <i class="ph-thin ph-caret-down" aria-hidden="true"></i>
+            </button>
+            <div class="h1b-nav__menu">
+              <a href="/about">About Us</a>
+              <a href="/technology">Our Technology</a>
+              <a href="/contact">Contact Us</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="h1b-header__actions">
+          <a class="h1b-header__login" href="https://app.tokeniser.com/signin"
+            >Login to Tokeniser</a
+          >
+          <a class="h1b-header__contact" href="/contact">Contact us</a>
+        </div>
+
+        <button
+          type="button"
+          class="h1b-header__menu-btn"
+          data-h1b-menu
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+        </button>
+      </div>
+
+      <div class="h1b-mobile" id="h1b-mobile-nav">
+        <div class="h1b-mobile__group">
+          <button type="button" class="h1b-mobile__label" aria-expanded="false">
+            Product
+            <i class="ph-thin ph-caret-down" aria-hidden="true"></i>
+          </button>
+          <div class="h1b-mobile__links">
+            <a href="/product">Overview</a>
+            <a href="/product/distribution">Distribution</a>
+            <a href="/product/liquidity">Liquidity</a>
+            <a href="/product/efficiency">Efficiency</a>
+            <a href="/product/getting-started">Getting Started</a>
+          </div>
+        </div>
+        <div class="h1b-mobile__group">
+          <button type="button" class="h1b-mobile__label" aria-expanded="false">
+            Superpowers
+            <i class="ph-thin ph-caret-down" aria-hidden="true"></i>
+          </button>
+          <div class="h1b-mobile__links h1b-mobile__links--superpowers">
+            <a class="h1b-mobile__group-label" href="/product/distribution"
+              >Distribution</a
+            >
+            <a href="/product/superpowers/always-on">Always-On</a>
+            <a href="/product/superpowers/real-time-transparency"
+              >Real-Time Transparency</a
+            >
+            <a class="h1b-mobile__group-label" href="/product/liquidity"
+              >Liquidity</a
+            >
+            <a href="/product/superpowers/secondary-transfer"
+              >Secondary Transfer</a
+            >
+            <a href="/product/superpowers/collateral-mobility"
+              >Collateral Mobility</a
+            >
+            <a class="h1b-mobile__group-label" href="/product/efficiency"
+              >Efficiency</a
+            >
+            <a href="/product/superpowers/instant-settlement"
+              >Instant Settlement</a
+            >
+            <a href="/product/superpowers/automated-compliance"
+              >Automated Compliance</a
+            >
+          </div>
+        </div>
+
+        <div class="h1b-mobile__group">
+          <button type="button" class="h1b-mobile__label" aria-expanded="false">
+            Solutions
+            <i class="ph-thin ph-caret-down" aria-hidden="true"></i>
+          </button>
+          <div class="h1b-mobile__links">
+            <a href="/solutions/funds">For Funds</a>
+            <a href="/solutions/companies">For Corporate Registry</a>
+            <a href="/solutions/asset-administrators"
+              >For Asset Administrators</a
+            >
+          </div>
+        </div>
+        <div class="h1b-mobile__group">
+          <button type="button" class="h1b-mobile__label" aria-expanded="false">
+            Resources
+            <i class="ph-thin ph-caret-down" aria-hidden="true"></i>
+          </button>
+          <div class="h1b-mobile__links">
+            <a href="/resources/knowledge-hub">Knowledge Hub</a>
+            <a href="/why-tokenise">Why Tokenise</a>
+            <a href="/protocol-finance">Protocol Finance</a>
+            <a href="/tokenisation-readiness-index">Readiness Index</a>
+            <a href="/tokenisation-calculator">Impact Calculator</a>
+          </div>
+        </div>
+        <div class="h1b-mobile__group">
+          <a href="/pricing">Pricing</a>
+        </div>
+        <div class="h1b-mobile__group">
+          <button type="button" class="h1b-mobile__label" aria-expanded="false">
+            About Us
+            <i class="ph-thin ph-caret-down" aria-hidden="true"></i>
+          </button>
+          <div class="h1b-mobile__links">
+            <a href="/about">About Us</a>
+            <a href="/technology">Our Technology</a>
+            <a href="/contact">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="h1b-mobile__cta">
+          <a class="h1b-header__login" href="https://app.tokeniser.com/signin"
+            >Login to Tokeniser</a
+          >
+          <a class="h1b-header__contact" href="/contact">Contact us</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="home-1b h1b-home">
+      <section class="h1b-hero" aria-label="Hero">
+        <div class="h1b-hero__bg" aria-hidden="true"></div>
+        <div class="h1b-hero__shade" aria-hidden="true"></div>
+        <div class="h1b-hero__shade-2" aria-hidden="true"></div>
+        <div class="h1b-hero__content">
+          <h1 class="h1b-hero__title">
+            Give your Australian fund a global edge
+          </h1>
+          <p class="h1b-hero__lede">
+            Tokenising your asset gives investors superpowers: 24/7 liquidity,
+            instant settlement, and more choice, while you stay locally
+            compliant.
+          </p>
+          <div class="h1b-hero__actions">
+            <a
+              class="h1b-btn h1b-btn--primary"
+              href="https://info-redbelly.zohobookings.com.au/demo"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Book a Demo</a
+            >
+            <a class="h1b-btn h1b-btn--ghost" href="/product">Learn more</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="h1b-trust" aria-label="Trusted by">
+        <div class="home-1b__inner h1b-trust__inner">
+          <p class="h1b-trust__label">
+            Used by top Australian financial institutions
+          </p>
+          <div class="h1b-trust__logos">
+            <span class="h1b-trust__logo">
+              <img src="/assets/iqeq.svg" alt="IQ-EQ" />
+            </span>
+            <span class="h1b-trust__logo">
+              <img
+                src="/assets/4002ff59cc3f9bd9800ba210cca7049cf745c969.png"
+                alt="JellyC"
+              />
+            </span>
+            <span class="h1b-trust__logo">
+              <img
+                src="/assets/5af359e0b204dabb03754e73c9aeacbca10cdcf6.png"
+                alt="Holon"
+              />
+            </span>
+            <span class="h1b-trust__logo">
+              <img
+                src="/assets/653805f612b124cbed64cefeae0c49bd5f06dc95.png"
+                alt="EnviroMission"
+              />
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="h1b-section h1b-proof" aria-label="Track record">
+        <div class="home-1b__inner">
+          <div class="h1b-proof__grid">
+            <div class="h1b-proof__stat">
+              <p class="h1b-proof__value">A$1.2B</p>
+              <span class="h1b-proof__rule" aria-hidden="true"></span>
+              <p class="h1b-proof__label">issued equity &amp; funds</p>
+            </div>
+            <div class="h1b-proof__stat">
+              <p class="h1b-proof__value">160+</p>
+              <span class="h1b-proof__rule" aria-hidden="true"></span>
+              <p class="h1b-proof__label">companies and funds</p>
+            </div>
+            <div class="h1b-proof__stat">
+              <p class="h1b-proof__value">A$2B+</p>
+              <span class="h1b-proof__rule" aria-hidden="true"></span>
+              <p class="h1b-proof__label">transactions</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="h1b-section h1b-section--platform" id="platform">
+        <div class="home-1b__inner">
+          <div class="h1b-head">
+            <h2 class="h1b-title">
+              Built for funds and companies ready to go global
+            </h2>
+            <p class="h1b-lede">
+              Tokeniser gives you a familiar experience with the power of
+              protocol finance. One stack. One partner. New superpowers.
+            </p>
+          </div>
+          <div class="h1b-platform-grid">
+            <article class="h1b-platform-card">
+              <i
+                class="ph-thin ph-globe-hemisphere-west"
+                aria-hidden="true"
+              ></i>
+              <h3>Expanded capital markets</h3>
+              <p>
+                Access cheaper funding and give investors 24/7 liquidity, with
+                leverage built in through protocol finance.
+              </p>
+            </article>
+            <article class="h1b-platform-card">
+              <i class="ph-thin ph-shield-check" aria-hidden="true"></i>
+              <h3>Regulation forward</h3>
+              <p>
+                Tokeniser operates on Redbelly Network, Australia's public
+                digital token infrastructure, with identity and eligibility
+                built into the protocol.
+              </p>
+            </article>
+            <article class="h1b-platform-card">
+              <i class="ph-thin ph-squares-four" aria-hidden="true"></i>
+              <h3>Works how you work</h3>
+              <p>
+                SaaS for fund administration and investor portals. Simple for
+                your team, powerful for your investors.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="h1b-section h1b-section--dark h1b-pf"
+        id="protocol-finance"
+      >
+        <div class="home-1b__inner">
+          <div class="h1b-head">
+            <h2 class="h1b-title">
+              New opportunities to impact your bottom line
+            </h2>
+            <p class="h1b-lede">
+              Tokenisation unlocks real differentiation for your company or
+              fund. Lower your cost of capital, enable secondary liquidity, and
+              improve distribution through protocol finance.
+            </p>
+          </div>
+
+          <div class="h1b-pf-tabs" aria-label="Protocol Finance topics">
+            <button
+              type="button"
+              class="h1b-pf-tab is-active"
+              data-pf-tab
+              id="product-ease"
+            >
+              Capital costs
+              <span class="h1b-pf-tab__bar"
+                ><span class="h1b-pf-tab__fill"></span
+              ></span>
+            </button>
+            <button
+              type="button"
+              class="h1b-pf-tab"
+              data-pf-tab
+              id="product-liquidity"
+            >
+              Liquidity
+              <span class="h1b-pf-tab__bar"
+                ><span class="h1b-pf-tab__fill"></span
+              ></span>
+            </button>
+            <button
+              type="button"
+              class="h1b-pf-tab"
+              data-pf-tab
+              id="product-distribution"
+            >
+              Distribution
+              <span class="h1b-pf-tab__bar"
+                ><span class="h1b-pf-tab__fill"></span
+              ></span>
+            </button>
+          </div>
+
+          <div class="h1b-pf-panel" aria-live="polite">
+            <div class="h1b-pf-shot h1b-pf-shot--photo" data-pf-shot>
+              <img
+                data-pf-shot-img
+                src="/assets/home/pf-capital-house.webp?v=3"
+                alt="Family gathering at a house at dusk"
+                style="object-position: 52% 42%"
+              />
+            </div>
+            <div class="h1b-pf-copy">
+              <h3 class="h1b-pf-copy__title" data-pf-title>
+                Access cheaper cost of capital
+              </h3>
+              <p class="h1b-pf-copy__body" data-pf-body>
+                24/7 liquidity options, created by protocol finance, give
+                investors the confidence to invest. Open new funding sources and
+                reduce your cost of capital.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="h1b-peek"
+            data-pf-peek
+            aria-label="Protocol Finance topics"
+          >
+            <article class="h1b-peek__card">
+              <img
+                src="/assets/home/pf-capital-house.webp?v=3"
+                alt=""
+                style="object-position: 52% 42%"
+              />
+              <h3>Access cheaper cost of capital</h3>
+              <p>
+                24/7 liquidity options, created by protocol finance, give
+                investors the confidence to invest. Open new funding sources and
+                reduce your cost of capital.
+              </p>
+            </article>
+            <article class="h1b-peek__card">
+              <img
+                src="/assets/home/pf-liquidity-swimmer.webp?v=3"
+                alt=""
+                style="object-position: 58% 45%"
+              />
+              <h3>Enable secondary liquidity</h3>
+              <p>
+                Investors can exit without waiting for a redemption window.
+                Continuous pricing and 24/7 settlement turn a locked position
+                into a tradeable one.
+              </p>
+            </article>
+            <article class="h1b-peek__card">
+              <img
+                src="/assets/home/pf-distribution-fishing.webp?v=3"
+                alt=""
+                style="object-position: 62% 48%"
+              />
+              <h3>Reach investors beyond your channels</h3>
+              <p>
+                Distribute to new investor pools through compliant on-chain
+                rails, without rebuilding your onboarding or your compliance
+                obligations.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="h1b-section h1b-sh" id="start-here">
+        <div class="home-1b__inner">
+          <div class="h1b-head">
+            <h2 class="h1b-title">Onboarding at your pace</h2>
+            <p class="h1b-lede">
+              Tokeniser provides a staged onboarding approach, minimising risks
+              from big go-live events. Get started easily, move at your own
+              pace, bringing operations along while you build the future.
+            </p>
+          </div>
+
+          <div class="h1b-steps" aria-label="Onboarding steps">
+            <button type="button" class="h1b-step is-active" data-sh-step>
+              <span class="h1b-step__top">
+                <span class="h1b-step__num">1</span>
+                <span class="h1b-step__rule" aria-hidden="true"></span>
+              </span>
+              <span class="h1b-step__label">Start with the system</span>
+            </button>
+            <button type="button" class="h1b-step" data-sh-step>
+              <span class="h1b-step__top">
+                <span class="h1b-step__num">2</span>
+                <span class="h1b-step__rule" aria-hidden="true"></span>
+              </span>
+              <span class="h1b-step__label">Decouple back-office changes</span>
+            </button>
+            <button type="button" class="h1b-step" data-sh-step>
+              <span class="h1b-step__top">
+                <span class="h1b-step__num">3</span>
+                <span class="h1b-step__rule" aria-hidden="true"></span>
+              </span>
+              <span class="h1b-step__label">Expert help</span>
+            </button>
+          </div>
+
+          <div class="h1b-sh-detail">
+            <div class="h1b-sh-shot" data-sh-shot></div>
+            <div class="h1b-sh-copy">
+              <h3 class="h1b-sh-copy__title" data-sh-title>
+                Retain existing workflows
+              </h3>
+              <p class="h1b-sh-copy__body" data-sh-body>
+                Start tokenising without overhauling your entire operation and
+                workflow. Start with system migration or data-mirroring, while
+                retaining existing workflows for critical processes like
+                AML/KYC.
+              </p>
+            </div>
+          </div>
+
+          <div class="h1b-peek" data-sh-peek aria-label="Onboarding steps">
+            <article class="h1b-peek__card">
+              <img
+                src="/assets/home/ui/expert-distributions.webp"
+                alt="Tokeniser Distributions screen"
+              />
+              <h3>Retain existing workflows</h3>
+              <p>
+                Start tokenising without overhauling your entire operation.
+                Start with system migration or data-mirroring, while retaining
+                existing workflows for critical processes like AML/KYC.
+              </p>
+            </article>
+            <article class="h1b-peek__card">
+              <img
+                src="/assets/ease/ui/approvals.webp"
+                alt="Tokeniser confirm changes modal"
+              />
+              <h3>Change the back office when you are ready</h3>
+              <p>
+                Tokenisation and back-office replacement are separate decisions.
+                Run the new rails alongside existing administration.
+              </p>
+            </article>
+            <article class="h1b-peek__card">
+              <img
+                src="/assets/distribution/ui/investor-holdings.webp"
+                alt="Tokeniser Investor holdings screen"
+              />
+              <h3>A team that has done this before</h3>
+              <p>
+                Our team works alongside yours through scoping, data mirroring
+                and first issuance.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="h1b-section h1b-section--soft" id="outcomes">
+        <div class="home-1b__inner">
+          <div class="h1b-outcomes__intro">
+            <h2>What tokenisation can deliver</h2>
+            <p>
+              Funds and companies using Tokeniser gain first-mover advantage in
+              multiple ways. Lower capital costs. Faster fundraising. Better
+              investor experience. The numbers speak for themselves.
+            </p>
+          </div>
+          <div class="h1b-bento">
+            <div class="h1b-bento__tile h1b-bento__tile--tall">
+              <div class="h1b-bento__value">T+0</div>
+              <div class="h1b-bento__label">Settlement times</div>
+            </div>
+            <div class="h1b-bento__tile">
+              <div class="h1b-bento__value">A$1.2B</div>
+              <div class="h1b-bento__label">Issued equity &amp; funds</div>
+            </div>
+            <div class="h1b-bento__tile">
+              <div class="h1b-bento__value">−23%</div>
+              <div class="h1b-bento__label">Operating costs</div>
+            </div>
+            <div class="h1b-bento__tile">
+              <div class="h1b-bento__value">24/7</div>
+              <div class="h1b-bento__label">Secondary liquidity</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="h1b-cta" aria-label="Tokenise today">
+        <div class="h1b-cta__shade" aria-hidden="true"></div>
+        <div class="h1b-cta__shade-2" aria-hidden="true"></div>
+        <div class="home-1b__inner h1b-cta__inner">
+          <h2 class="h1b-cta__title">
+            Give your fund superpowers. Tokenise today.
+          </h2>
+          <p class="h1b-cta__lede">
+            Let's talk about your path forward and what's possible.
+          </p>
+          <div class="h1b-cta__actions">
+            <a
+              class="h1b-btn h1b-btn--primary"
+              href="https://info-redbelly.zohobookings.com.au/demo"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Book a Demo</a
+            >
+            <a class="h1b-btn h1b-btn--ghost" href="/contact">Contact us</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="h1b-section h1b-section--soft h1b-faq" id="faq">
+        <div class="home-1b__inner">
+          <div class="h1b-head">
+            <h2 class="h1b-title">FAQ</h2>
+            <p class="h1b-lede">
+              Common questions about Tokeniser and tokenisation answered.
+            </p>
+          </div>
+          <div class="h1b-faq-grid">
+            <article class="h1b-faq-item">
+              <button
+                type="button"
+                class="h1b-faq-item__q"
+                aria-expanded="false"
+              >
+                <i class="ph-thin ph-cube" aria-hidden="true"></i>
+                <h3>What is Tokenisation?</h3>
+                <span class="h1b-faq-item__toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="h1b-faq-item__a">
+                <p>
+                  Tokenisation records ownership of financial products and
+                  services as digital tokens, and lets you program the rules of
+                  the asset. Holders gain fractional ownership, direct custody,
+                  atomic settlement, and 24/7 secondary trading through protocol
+                  finance.
+                </p>
+              </div>
+            </article>
+            <article class="h1b-faq-item">
+              <button
+                type="button"
+                class="h1b-faq-item__q"
+                aria-expanded="false"
+              >
+                <i class="ph-thin ph-target" aria-hidden="true"></i>
+                <h3>Why use Tokeniser?</h3>
+                <span class="h1b-faq-item__toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="h1b-faq-item__a">
+                <p>
+                  Tokeniser gives you the benefits of tokenisation without the
+                  technology project. Your team keeps familiar registry
+                  operations, one platform handles everything from issuance to
+                  settlement, and you gain a lower cost of capital, faster
+                  raises, and new distribution reach.
+                </p>
+              </div>
+            </article>
+            <article class="h1b-faq-item">
+              <button
+                type="button"
+                class="h1b-faq-item__q"
+                aria-expanded="false"
+              >
+                <i class="ph-thin ph-seal-check" aria-hidden="true"></i>
+                <h3>Is Tokeniser regulated?</h3>
+                <span class="h1b-faq-item__toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="h1b-faq-item__a">
+                <p>
+                  Tokeniser is built for Australia's digital asset laws as
+                  public digital token infrastructure: governed under local law,
+                  with eligibility and compliance programmed into the protocol.
+                  Products issued through Tokeniser operate under an Asset
+                  Issuer's existing licensing.
+                </p>
+              </div>
+            </article>
+            <article class="h1b-faq-item">
+              <button
+                type="button"
+                class="h1b-faq-item__q"
+                aria-expanded="false"
+              >
+                <i class="ph-thin ph-plugs" aria-hidden="true"></i>
+                <h3>Can we use our own systems?</h3>
+                <span class="h1b-faq-item__toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="h1b-faq-item__a">
+                <p>
+                  Customer configuration is flexible. Our API and MCP let you
+                  integrate Tokeniser with your existing registry, or build a
+                  custom investor portal.
+                </p>
+              </div>
+            </article>
+            <article class="h1b-faq-item">
+              <button
+                type="button"
+                class="h1b-faq-item__q"
+                aria-expanded="false"
+              >
+                <i class="ph-thin ph-clock-countdown" aria-hidden="true"></i>
+                <h3>How long does onboarding take?</h3>
+                <span class="h1b-faq-item__toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="h1b-faq-item__a">
+                <p>
+                  You set the pace. Onboarding is staged, so you can start with
+                  a first raise or a registry migration and add capabilities as
+                  you're ready. Our practitioners guide each stage, and your
+                  timeline follows your business.
+                </p>
+              </div>
+            </article>
+            <article class="h1b-faq-item">
+              <button
+                type="button"
+                class="h1b-faq-item__q"
+                aria-expanded="false"
+              >
+                <i class="ph-thin ph-scales" aria-hidden="true"></i>
+                <h3>What about compliance?</h3>
+                <span class="h1b-faq-item__toggle" aria-hidden="true">+</span>
+              </button>
+              <div class="h1b-faq-item__a">
+                <p>
+                  Designed to work within your existing licensing framework,
+                  Tokeniser programs eligibility into every asset at the
+                  protocol level: identity, KYC, AML, CTF, wholesale and
+                  sophisticated investor tests, and TMD. Every holder is
+                  verified and every transfer checked against the asset's rules,
+                  automatically.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============== FOOTER (current live footer kept) ============== -->
+    <footer class="site-footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__brand-top">
+            <a class="footer__logo-link" href="/" aria-label="Tokeniser home">
+              <span class="footer__logo-wrap">
+                <img
+                  class="footer__logo"
+                  src="/assets/8cb948d8bcfe1f3c513654fdb6f11044fea3b6c7.webp"
+                  alt="Tokeniser"
+                  width="182"
+                  height="37"
+                />
+              </span>
+            </a>
+            <p class="footer__copy">© Tokeniser 2026. All rights reserved.</p>
+            <p class="footer__copy">
+              Tokeniser Pty. Ltd. is an Australian company providing compliant
+              asset tokenisation and management solutions.
+            </p>
+          </div>
+
+          <div class="footer__divider"></div>
+
+          <div class="footer__links">
+            <a class="footer__link" href="/privacy-policy">Privacy Policy</a>
+            <a class="footer__link" href="#" data-cookie-settings
+              >Cookie Settings</a
+            >
+            <a class="footer__link" href="/terms-and-conditions"
+              >Terms &amp; Conditions</a
+            >
+          </div>
+
+          <p class="footer__legal">
+            <strong>Tokeniser is a Redbelly Network project:</strong>
+            born from research at the University of Sydney and Australian
+            Government Science Agency: CSIRO, and built on infrastructure
+            trusted by leading financial institutions.
+          </p>
+        </div>
+
+        <div class="footer__contact">
+          <p class="footer__contact-h">Contact</p>
+          <a href="/contact">Contact sales</a>
+          <a
+            href="https://info-redbelly.zohobookings.com.au/demo"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Request a demo</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script defer src="/assets/knowledge-hub/proto-bar.js?v=9"></script>
+    <script defer src="/assets/h1b-header.js?v=14"></script>
+    <script defer src="/assets/home-1b.js?v=27"></script>
+    <script defer src="/assets/zoho-utm-advanced.js?v=21"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install python-docx (Word text check)
+        run: pip install python-docx
+
+      - name: Install poppler (pdftotext and pdfinfo)
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      # Optional repository secret DENYLIST: private patterns, one per line.
+      # check.py scans text, site, PDF properties and evidence for them.
+      - name: Private denylist
+        env:
+          DENYLIST: ${{ secrets.DENYLIST }}
+        run: |
+          if [ -n "$DENYLIST" ]; then printf '%s\n' "$DENYLIST" > .denylist; fi
+
+      - name: Commit message has no dash or emoji
+        env:
+          LC_ALL: C.UTF-8
+        run: |
+          if git log -1 --format=%B | grep -P '[\x{2013}\x{2014}\x{1F300}-\x{1FAFF}]'; then
+            echo "The latest commit message has a dash or an emoji"; exit 1
+          fi
+
+      - name: Quality gate
+        run: python3 scripts/check.py

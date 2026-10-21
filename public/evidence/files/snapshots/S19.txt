@@ -1,0 +1,8 @@
+Scoped text copy of an Etherscan page, captured 20/10/2026 15:13 (browser print).
+Price, holdings, balance, sponsored and advertising fields were omitted. This is NOT a full capture of the page.
+Source: https://etherscan.io/address/0xb45ffb51984d626ee758b336c61cf20990c6bf13
+
+Wrapped RBNT | Address: 0xb45ffb51...990c6bf13 | Etherscan
+Contract 0xb45fFB51984d626Ee758b336C61Cf20990c6bF13
+CONTRACT CREATOR: 0xB1b64005…92d98F2E2 | 1 yr 298 days ago
+TOKEN TRACKER: Wrapped RBNT (WRBNT)
