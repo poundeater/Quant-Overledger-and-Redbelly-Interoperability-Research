@@ -14,10 +14,10 @@ out.parent.mkdir(parents=True, exist_ok=True)
 md = (R / "REPORT.md").read_text()
 title = re.search(r"^# (.+)$", md, re.M)[1]
 
-tmp = Path(tempfile.mkdtemp()) / "raw.docx"
-subprocess.run(["pandoc", str(R / "REPORT.md"), "-f", "markdown+pipe_tables", "-o", str(tmp)], check=True)
-
-d = Document(str(tmp))
+with tempfile.TemporaryDirectory() as td:
+    tmp = Path(td) / "raw.docx"
+    subprocess.run(["pandoc", str(R / "REPORT.md"), "-f", "markdown+pipe_tables", "-o", str(tmp)], check=True)
+    d = Document(str(tmp))
 FONT, STEEL = "Be Vietnam Pro", RGBColor(0x1D, 0x31, 0x40)
 for st in d.styles:
     if st.type != 1 or not hasattr(st, "font"): continue

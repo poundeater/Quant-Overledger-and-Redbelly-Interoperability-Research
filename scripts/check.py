@@ -18,9 +18,6 @@ for pat in ([l.strip() for l in _dl.read_text().splitlines() if l.strip()] if _d
 if "no source reviewed shows a partnership" not in txt["REPORT.md"]: errs.append("missing no-partnership statement")
 for p in re.findall(r"^\d/ (.+)$", txt["COMMUNITY-SUMMARY.md"], re.M):
     if len(p) > 280: errs.append(f"post over 280: {len(p)}")
-for f in (R / "public" / "downloads").glob("*.docx"):
-    z = zipfile.ZipFile(f); core = z.read("docProps/core.xml").decode() if "docProps/core.xml" in z.namelist() else ""
-    if re.search(r"<dc:creator>[^<]+", core): errs.append("docx has an author property")
 
 # --- home answers and downloads (v21) ---
 _home = (R / "public" / "index.html").read_text(errors="ignore") if (R / "public" / "index.html").exists() else ""
@@ -29,9 +26,11 @@ for _ext in ("pdf", "docx"):
     _f = R / "public" / "downloads" / f"Quant-Overledger-Redbelly-Report.{_ext}"
     if not _f.exists(): errs.append(f"missing download: {_f.name}")
     elif f"/downloads/{_f.name}" not in _home: errs.append(f"home page does not link {_f.name}")
+_hero = (re.search(r'<section class="hero">.*?</section>', _home, re.S) or [""])[0]
+if "/downloads/Quant-Overledger-Redbelly-Report.pdf" not in _hero: errs.append("home hero has no PDF button")
 _dx = R / "public" / "downloads" / "Quant-Overledger-Redbelly-Report.docx"
 if _dx.exists():
-    _body = zipfile.ZipFile(_dx).read("word/document.xml").decode(errors="ignore")
+    with zipfile.ZipFile(_dx) as z: _body = z.read("word/document.xml").decode(errors="ignore")
     if "\u2014" in _body or "\u2013" in _body: errs.append("dash in docx text")
     if "[ST]" in _body: errs.append("unexpected marker in docx")
 
@@ -48,9 +47,13 @@ if snaps.is_dir():
         if phrase.lower() not in f.read_text(errors="ignore").lower(): errs.append(f"snapshot {sid} lacks expected text '{phrase}' (blocked or wrong page?)")
     man = ev / "manifest.txt"
     if man.exists():
-        for h, name in re.findall(r"^([0-9a-f]{64})  (S\d+\.(?:html|txt|png|pdf))$", man.read_text(), re.M):
+        listed = {name: h for h, name in re.findall(r"^([0-9a-f]{64})  (S\d+(?:\.ocr)?\.(?:html|txt|png|pdf))$", man.read_text(), re.M)}
+        for name, h in listed.items():
             f = snaps / name
-            if f.exists() and hashlib.sha256(f.read_bytes()).hexdigest() != h: errs.append(f"hash mismatch: {name}")
+            if not f.exists(): errs.append(f"manifest lists a missing snapshot: {name}")
+            elif hashlib.sha256(f.read_bytes()).hexdigest() != h: errs.append(f"hash mismatch: {name}")
+        for f in sorted(snaps.iterdir()):
+            if f.is_file() and f.name not in listed: errs.append(f"snapshot has no hash in manifest: {f.name}")
 else: print("snapshots: not present, skipped")
 
 # exact-quote check: every line of evidence/quotes.tsv must appear word for word in its snapshot
@@ -79,13 +82,16 @@ if "--online" in _s.argv:   # add --save to also write evidence/link-check.txt
     print("\n".join(_links))
     if "--save" in _s.argv: (ev / "link-check.txt").write_text("\n".join(_links) + "\n", encoding="utf-8")
 # --- hygiene checks (v19) ---
-import subprocess
-_em = subprocess.run(["git", "-C", str(R), "log", "--format=%ae"], capture_output=True, text=True).stdout.split()
-_bad = sorted({e for e in _em if not e.endswith("@users.noreply.github.com")})
-if _bad: errs.append("non-noreply author emails in history: " + ", ".join(_bad))
+import subprocess, shutil, json
+if shutil.which("git") and (R / ".git").exists():
+    _em = subprocess.run(["git", "-C", str(R), "log", "--format=%ae%n%ce"], capture_output=True, text=True).stdout.split()
+    _bad = sorted({e for e in _em if not e.endswith("@users.noreply.github.com") and e != "noreply@github.com"})
+    if _bad: errs.append("non-noreply author or committer emails in history: " + ", ".join(_bad))
+else: print("git history: not available, email check skipped")
 _pdf = R / "public/downloads/Quant-Overledger-Redbelly-Report.pdf"
 _pats = [l.strip() for l in _dl.read_text().splitlines() if l.strip()] if _dl.exists() else []
-if _pdf.exists():
+if _pdf.exists() and not shutil.which("pdfinfo"): errs.append("pdfinfo not found, install poppler-utils")
+elif _pdf.exists():
     _meta = subprocess.run(["pdfinfo", str(_pdf)], capture_output=True, text=True).stdout
     print("PDF metadata:", " | ".join(l for l in _meta.splitlines() if l.split(":")[0] in ("Title", "Author", "Creator", "Producer")))
     for _pat in _pats:
@@ -145,5 +151,10 @@ for _d in (_pub / "downloads").glob("*.docx"):
 _css = "\n".join(re.findall(r"<style[^>]*>(.*?)</style>", (_pub / "index.html").read_text(), re.S))
 if re.search(r"box-shadow:\s*[^n;}]", _css): errs.append("drop shadow in CSS (brand: none)")
 if re.search(r"border-radius:\s*(9999|99)px|border-radius:50%\s*;[^}]*\.btn", _css): errs.append("pill button radius")
+try: _vj = json.loads((R / "vercel.json").read_text())
+except Exception: _vj = None; errs.append("vercel.json missing or not valid JSON")
+if _vj is not None:
+    if _vj.get("outputDirectory") != "public": errs.append("vercel.json must serve public/")
+    if "nosniff" not in json.dumps(_vj.get("headers", [])): errs.append("vercel.json lost its security headers")
 import check_deep; check_deep.run(R, txt, errs)
 print("\n".join(errs) or "no issues"); print("RESULT:", "FAIL" if errs else "PASS"); sys.exit(1 if errs else 0)

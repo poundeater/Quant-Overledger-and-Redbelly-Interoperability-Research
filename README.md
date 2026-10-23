@@ -8,7 +8,7 @@ Live site: https://quant-overledger-research.vercel.app
 
 | Deliverable | Where |
 | --- | --- |
-| Report | the site, `REPORT.md`, and `public/downloads/Quant-Overledger-Redbelly-Report.pdf` and `.docx` (both linked in the site header) |
+| Report | the site, `REPORT.md`, and `public/downloads/Quant-Overledger-Redbelly-Report.pdf` and `.docx` (both linked in the site header; the PDF also from the home page) |
 | Community summary (paragraphs and X thread) | `COMMUNITY-SUMMARY.md` |
 | Source list, link for every claim | `SOURCES.md` and the Sources page |
 | Plain words glossary | `GLOSSARY.md` and the Glossary page |
@@ -26,19 +26,19 @@ Every finding paragraph carries one label. **Confirmed**: a linked source says i
 ## Rebuild and check
 
 ```
-pip install markdown reportlab python-docx
-python3 scripts/make_diagrams.py
-python3 scripts/build_site.py
-python3 scripts/make_pdf.py
-python3 scripts/make_docx.py   # needs pandoc and python-docx
-python3 scripts/check.py     # must end with RESULT: PASS
+pip install markdown reportlab python-docx beautifulsoup4
+sudo apt-get install pandoc poppler-utils
+sh build.sh                  # every step in order, ends with check.py: RESULT: PASS
+python3 -m http.server -d public 8000   # local preview
 ```
+
+Run `build.sh`, not single scripts: `build_site.py` clears the evidence pages, and `build_evidence.py`, `build_reader.py` and `add_zoom.py` must run after it. A rebuild also writes a new PDF and Word file even when `REPORT.md` did not change (new timestamps); restore them with `git checkout public/downloads` if the report text is unchanged.
 
 Optional: put private words to block (names, handles), one per line, in a git-ignored `.denylist` file. `check.py` then also scans the text and the built site for them.
 
 ## Deploy
 
-Static site on Vercel. `vercel.json` serves `public/` with clean URLs and no build step.
+Static site on Vercel. `vercel.json` serves `public/` with clean URLs, no build step and basic security headers. It is edited by hand; the build does not rewrite it.
 
 ## Licences
 

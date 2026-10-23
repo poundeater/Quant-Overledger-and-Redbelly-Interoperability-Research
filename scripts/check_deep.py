@@ -34,7 +34,9 @@ def run(R, txt, errs):
     # 2. PDF and Word contain every chapter heading and the opening words of every paragraph
     pdf = pub / "downloads/Quant-Overledger-Redbelly-Report.pdf"
     dx = pub / "downloads/Quant-Overledger-Redbelly-Report.docx"
-    pdf_t = clean(subprocess.run(["pdftotext", str(pdf), "-"], capture_output=True, text=True).stdout) if pdf.exists() else ""
+    import shutil
+    if pdf.exists() and not shutil.which("pdftotext"): errs.append("pdftotext not found, install poppler-utils")
+    pdf_t = clean(subprocess.run(["pdftotext", str(pdf), "-"], capture_output=True, text=True).stdout) if pdf.exists() and shutil.which("pdftotext") else ""
     dx_t = ""
     if dx.exists():
         import docx
@@ -54,7 +56,6 @@ def run(R, txt, errs):
             words = clean(re.sub(r"^\*\*(?:Confirmed|Tested|Analysis|Unknown)[.:]?\*\*", "", p)).split()
             probe = " ".join(words[:8]); tail = " ".join(words[-6:])
             if len(words) >= 8 and (probe not in body or tail not in body): miss += 1; errs.append(f"{name} text differs from report near: {probe}")
-        for h, _ in [(x, 0) for x in LABELS]: pass
     # 3. SVG rules
     for f in sorted((pub / "diagrams").glob("*.svg")):
         s = f.read_text(); n = f.name
@@ -105,14 +106,16 @@ def run(R, txt, errs):
     for raw in sorted((R / "evidence/snapshots").glob("S*.html")):
         sid = raw.stem; rv = pub / "evidence/source" / sid / "index.html"
         if not rv.exists(): errs.append(f"{sid}: no reader view"); continue
-        h = rv.read_text(errors="ignore"); body = _n(re.search(r'<div class="rd">(.*)</div><p style', h, re.S).group(1)).lower()
+        h = rv.read_text(errors="ignore"); rd = re.search(r'<div class="rd">(.*)</div><p style', h, re.S)
+        if not rd: errs.append(f"{sid}: reader view has no text block"); continue
+        body = _n(rd.group(1)).lower()
         m = re.search(rf"^([0-9a-f]{{64}})  {sid}\.html$", manifest, re.M)
         if m and m.group(1) not in h: errs.append(f"{sid}: reader view does not show the raw SHA-256")
         if f"/evidence/files/snapshots/{sid}.html.txt" not in h: errs.append(f"{sid}: reader view has no link to the raw copy")
         for q in qmap.get(sid, []):
             if _n(q).lower() not in body: errs.append(f"{sid}: quote missing from reader view: {q[:40]}")
         rawn = _n(raw.read_text(errors="ignore")).lower()
-        for ptxt in re.findall(r"<(?:p|h3)>(.*?)</(?:p|h3)>", re.search(r'<div class="rd">(.*)</div><p style', h, re.S).group(1), re.S):
+        for ptxt in re.findall(r"<(?:p|h3)>(.*?)</(?:p|h3)>", rd.group(1), re.S):
             t = _n(re.sub(r"</?mark>", "", ptxt)).lower()
             if t and t not in rawn: errs.append(f"{sid}: reader text not found in raw copy: {t[:40]}"); break
     # 8. raw copies are published as .txt (never as pages) and are byte for byte the saved files

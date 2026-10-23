@@ -1,7 +1,9 @@
 build/
-.DS_Store
 HANDOFF*
-*.env
-.DS_Store
 .denylist
+.env
+.env.*
+*.env
+.vercel
+.DS_Store
 __pycache__/

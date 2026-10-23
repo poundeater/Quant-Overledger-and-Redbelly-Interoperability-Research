@@ -128,7 +128,6 @@ def write(rel, s):
 for f in glob.glob(str(R/"scripts"/"fonts"/"*.ttf")): (P/"fonts").mkdir(parents=True,exist_ok=True); shutil.copy(f,P/"fonts")
 for d in ("chapters", "sources", "evidence", "community", "glossary"): shutil.rmtree(P / d, ignore_errors=True)
 for old in P.glob("*.html"): old.unlink()
-(R / "vercel.json").write_text(json.dumps({"outputDirectory": "public", "cleanUrls": True, "trailingSlash": True}, indent=2))
 FIG = {2: ["stack"], 3: ["selfserve", "fusion"], 4: ["access", "receptor"], 5: ["routes", "levels"], 6: ["work"], 8: ["boundary", "breaks"]}
 def figs(n):
     out = ""
@@ -257,6 +256,6 @@ cc = "".join(f'<a class="card" href="/chapters/{c["slug"]}/"><span class="n">{c[
 dg = "".join(f'<div class="card dg" style="padding:0;overflow:hidden;background:#141f26">{Path(d).read_text()}</div>' for d in sorted(glob.glob(str(P / "diagrams" / "*.svg")), key=lambda x: (["stack","routes","levels","selfserve","fusion","access","receptor","work","boundary","breaks"] + [Path(x).stem]).index(Path(x).stem)))
 dg = f'<h2 class="sec">Diagrams</h2><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr));align-items:start">{dg}</div>' if dg else ""
 lede = E(re.sub(r"[*_`#>]|\[[ST]\d+\]", "", intro.split("\n\n")[0])[:260]) if intro else ""
-home = f'<section class="hero"><div><h1>{E(title)}</h1><p>{lede}</p><a class="btn p" href="/chapters/{chapters[0]["slug"]}/">Read the report</a><a class="btn" href="/sources/">Sources</a><a class="btn" href="/evidence/">Evidence</a></div></section><main>{ans}<h2 class="sec">Chapters</h2><div class="grid">{cc}</div>{dg}<h2 class="sec">Evidence status across the report</h2><div class="grid">{stats}</div></main>'
+home = f'<section class="hero"><div><h1>{E(title)}</h1><p>{lede}</p><a class="btn p" href="/chapters/{chapters[0]["slug"]}/">Read the report</a><a class="btn" href="/sources/">Sources</a><a class="btn" href="/evidence/">Evidence</a><a class="btn" href="/downloads/Quant-Overledger-Redbelly-Report.pdf" target="_blank" rel="noopener">Download PDF</a></div></section><main>{ans}<h2 class="sec">Chapters</h2><div class="grid">{cc}</div>{dg}<h2 class="sec">Evidence status across the report</h2><div class="grid">{stats}</div></main>'
 write("index.html", page(SITE, home, ""))
 print(f"built {len(chapters)} chapters, {len(files)} evidence files")

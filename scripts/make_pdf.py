@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds public/downloads/report.pdf from REPORT.md in Redbelly DAO brand style (light page, steel cover band)."""
+"""Builds public/downloads/Quant-Overledger-Redbelly-Report.pdf from REPORT.md in Redbelly DAO brand style (light page, steel cover band)."""
 import re, glob, html
 from pathlib import Path
 from reportlab.lib.pagesizes import A4
